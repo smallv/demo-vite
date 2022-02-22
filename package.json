@@ -1,0 +1,22 @@
+{
+  "name": "demo-vite",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "test": "vite serve --mode test",
+    "pre": "vite serve --mode pre",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "axios": "0.21",
+    "element-plus": "^2.0.2",
+    "vue": "^3.0.4",
+    "vue-router": "4",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.0.4",
+    "sass": "^1.49.8",
+    "vite": "^1.0.0-rc.13"
+  }
+}
