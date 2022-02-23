@@ -1,24 +1,32 @@
 import * as VueRouter from 'vue-router'
-const Home = import('../page/Home.vue') 
+const Home = import('../page/Home.vue')
+const DraftList = import('../page/draft/draftList.vue')
+const AddDraft = import('../page/draft/addDraft.vue')
+const Index = import('../page/index/index.vue')
 
 const routes = [
   {
     path: '/',
-    component: () => import('../page/index/index.vue')
+    component: Index
   }, {
     path: '/draft',
     component: Home,
     children: [{
-      path: '/draft/darftList',
-      component: () => import('../page/draft/draftList.vue')
+      path: '/draft/draftList',
+      component: DraftList
     }, {
       path: '/draft/addDraft',
-      component: () => import('../page/draft/addDraft.vue')
+      component: AddDraft
     }]
   }
 ]
+// const routes = {
+//   '/': Index
+// }
+
  
 export default VueRouter.createRouter({
-  history: VueRouter.createWebHashHistory(),
+  // history: VueRouter.createWebHashHistory(), // 哈希模式
+  history: VueRouter.createWebHistory(),// history模式
   routes
 })
